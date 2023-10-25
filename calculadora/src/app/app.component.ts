@@ -11,12 +11,8 @@ export class AppComponent {
 
   childValue: string = "";
 
-
-
   receveValue($event: any){
     this.childValue = $event;
-    console.log(this.childValue);
-    console.log($event);
   }
 
 }
