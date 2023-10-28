@@ -1,25 +1,50 @@
 <div class="calc-container">
-    <app-visor [fromParent] = "childValue"></app-visor>
+
+    <div class="display">
+        <div class="text-box">
+            <h2 class="display-txt top-display">{{ display2 }}</h2>
+        </div>
+
+        <div class="text-box">
+            <h2 class="display-txt bot-display">{{ display }}</h2>
+        </div>
+    </div>  
+
     <div class="bttn-container">
-        <app-botao [buttonValue] = "'c'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'+/-'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'%'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'+'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'7'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'8'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'9'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'*'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'4'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'5'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'6'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'-'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'1'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'2'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'3'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'/'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'0'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'.'" (buttonClicked) = "receveValue($event)"></app-botao>
-        <app-botao [buttonValue] = "'='" (buttonClicked) = "receveValue($event)"></app-botao>
+        <div class="bttn-line">
+            <button #c class="calc-bttn size-1" (click) = "bttnclicked('c')">c</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('+/-')">+/-</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('%')">%</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('+')">+</button>
+        </div>
+
+        <div class="bttn-line">
+            <button class="calc-bttn size-1" (click) = "bttnclicked('7')">7</button>
+        <button class="calc-bttn size-1" (click) = "bttnclicked('8')">8</button>
+        <button class="calc-bttn size-1" (click) = "bttnclicked('9')">9</button>
+        <button class="calc-bttn size-1" (click) = "bttnclicked('*')">*</button>
+        </div>
+
+        <div class="bttn-line">
+            <button class="calc-bttn size-1" (click) = "bttnclicked('4')">4</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('5')">5</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('6')">6</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('-')">-</button>
+        </div>
+
+        <div class="bttn-line">
+            <button class="calc-bttn size-1" (click) = "bttnclicked('1')">1</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('2')">2</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('3')">3</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('/')">/</button>
+        </div>
+
+        <div class="bttn-line">
+            <button class="calc-bttn size-1" (click) = "bttnclicked('0')">0</button>
+            <button class="calc-bttn size-1" (click) = "bttnclicked('.')">.</button>
+            <button class="calc-bttn size-2" (click) = "bttnclicked('=')">=</button>
+        </div>
+
     </div>
 
 </div>
