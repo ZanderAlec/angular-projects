@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --purple: #4036A9;
+    --blue: #111729;
+    --very-light-blue: #CDD5E0;
+    --white: #F8FAFC;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body{
+    height: 100%;
+}
