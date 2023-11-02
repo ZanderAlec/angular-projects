@@ -6,7 +6,7 @@ O projeto foi feito utilizando Angular e Css.
 ![image](https://github.com/ZanderAlec/angular-projects/assets/72523734/ea4a291e-46d3-4482-8eef-a40970913ddd)
 
 O design feito por devChallenges
-link do desafio: https://devchallenges.io/challenge/31
+Link do desafio: [https://devchallenges.io/challenge/31](https://devchallenges.io/challenge/31)
 
 ## Implementação
 
@@ -17,5 +17,6 @@ link do desafio: https://devchallenges.io/challenge/31
 ![Screenshot 2023-11-02 at 16-05-16 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/320d6b33-d2e9-4423-b42d-de689e4dfb51)
 
 Algumas validações foram feitas utilizando o formsModule
-![Screenshot 2023-11-02 at 16-06-11 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/f4243144-54a9-4a4f-9f89-381a9433a749)
+
+![Screenshot 2023-11-02 at 16-13-03 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/af39f342-3019-44bf-a5e0-4382453d75d4)
 
