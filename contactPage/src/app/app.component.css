@@ -48,12 +48,15 @@ header{
     margin-bottom: 0.2rem;
 }
 
+.input-container{
+    margin-bottom: 1rem;
+}
+
 .form-input{
     width: 100%;
     padding: 0.7rem;
     border-radius: 8px;
     border: none;
-    margin-bottom: 1rem;
 }
 
 .form-input::placeholder{
@@ -73,13 +76,26 @@ header{
 .form-bttn:hover{
     background-color: var(--very-light-blue);
     cursor: pointer;
-    
+}
+
+.form-bttn:disabled{
+    pointer-events: none;
 }
 
 .dinamicInputs{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+}
+
+/*Errors*/
+.error{
+    outline: 2px solid rgb(193, 11, 11);
+}
+
+.error-msg{
+    margin-top: 0.5rem;
+    color:  rgb(160, 0, 0);
 }
 
 /**Responsivity------------------------------------------------------------*/
@@ -134,9 +150,12 @@ header{
         margin: 0 18%;
     }
 
+    .input-container{
+        margin-bottom: 2vw;
+    }
+
     .form-input{
         padding: 1.8vw;
-        margin-bottom: 2vw;
     }
 
     .label{
@@ -145,7 +164,9 @@ header{
 
     .select-input{
         font-size: 1.1vw;
+        color: var(--blue);
     }
+
 
     .form-input::placeholder{
         font-size: 1.2vw;

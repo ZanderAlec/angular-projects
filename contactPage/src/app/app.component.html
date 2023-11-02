@@ -12,24 +12,55 @@
  
 
   <div class="formContainer">
-    <form>
+
+    <form #f = 'ngForm'>
       <div class="dinamicInputs">
 
-        <div>
+        <div class="input-container">
           <label class="white-txt label">Nome</label>
-          <input type="text" class="form-input"  placeholder="Ethan Johnson">       
+          <input type="text" class="form-input"
+            placeholder="Ethan Johnson" 
+            name="fullName" 
+            ngModel 
+            #fullName = "ngModel"
+            required
+            [ngClass] = "{ 'error' : fullName.touched && fullName.invalid}"
+            (focus) = "printa(fullName)"
+            >       
+
+          <div>
+              <p class="error-msg" *ngIf = "fullName.touched && fullName.invalid">Can't be blank.</p>
+          </div>
+
         </div>
         
-        <div>
+        <div class="input-container">
           <label class="white-txt label" >Company Email</label>
-          <input type="email" class="form-input" placeholder="ethan@johnson.com" >    
+          <input type="email"
+           class="form-input" 
+           placeholder="ethan@johnson.com" 
+           name = "email"
+           ngModel 
+           #email = 'ngModel'
+           required
+           pattern = "[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
+           [ngClass] = "{ 'error' : email.touched && email.invalid } "
+           >    
+
+           <div *ngIf = "email.errors?.['required']" >
+            <p class="error-msg" *ngIf = "email.touched && email.invalid">Can't be blank.</p>
+         </div>
+
+           <div *ngIf = "email.errors?.['pattern']" >
+              <p class="error-msg" *ngIf = "email.touched && email.invalid">Invalid email address.</p>
+           </div>
         </div>
          
       </div>
 
       <div class="dinamicInputs">
 
-        <div>
+        <div class="input-container">
           <label class="white-txt label"  for="">Company Size</label>
           <Select name="compSize" class="form-input select-input">
               <option value="">1-10 employees</option>
@@ -38,7 +69,7 @@
           </Select>
         </div>
         
-        <div>
+        <div class="input-container">
           <label class="white-txt label" for="">Subject</label>
           <Select name="compSize" class="form-input select-input">
               <option value="">Building Landing Pages</option>
@@ -49,10 +80,26 @@
         
       </div>
 
-      <label class="white-txt label" for="">Message</label>
-      <textarea name="message" id="" cols="30" rows="10" class="form-input select-input">50-100 employees</textarea>
+      <div class="input-container">
+        <label class="white-txt label" for="">Message</label>
+        <textarea name="message" 
+                  id=""
+                  cols="30" rows="10" 
+                  class="form-input select-input"
+                  ngModel
+                  #message = 'ngModel'
+                  required
+                  [ngClass] = "{'error' : message.touched && message.invalid}"
+                  placeholder = "50-100 employees"
+                  >50-100 employees</textarea>
+
+        <div *ngIf = "message.errors?.['required']">
+          <p class="error-msg" *ngIf = "message.invalid && message.touched">Can't be blank.</p>
+        </div>
+      </div>
+      
     
-      <input class="form-input form-bttn" type="submit" value = "contact Sales"> 
+      <input class="form-input form-bttn" type="submit" [disabled] = "f.invalid" value = "contact Sales"> 
     </form>
   </div>
 </div>
