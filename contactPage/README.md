@@ -6,6 +6,7 @@ O projeto foi feito utilizando Angular e Css.
 ![image](https://github.com/ZanderAlec/angular-projects/assets/72523734/ea4a291e-46d3-4482-8eef-a40970913ddd)
 
 O design feito por devChallenges
+
 Link do desafio: [https://devchallenges.io/challenge/31](https://devchallenges.io/challenge/31)
 
 ## Implementação
