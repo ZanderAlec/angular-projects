@@ -1,27 +1,23 @@
 # ContactPage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+O projeto foi feito utilizando Angular e Css.
 
-## Development server
+## Design
+![image](https://github.com/ZanderAlec/angular-projects/assets/72523734/ea4a291e-46d3-4482-8eef-a40970913ddd)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O design feito por devChallenges
 
-## Code scaffolding
+Link do desafio: [https://devchallenges.io/challenge/31](https://devchallenges.io/challenge/31)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Implementação
 
-## Build
+![Screenshot 2023-11-02 at 16-06-11 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/677de5ed-9de9-4aae-9aed-4b0969ca1aeb)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Screenshot 2023-11-02 at 16-07-31 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/b4ba0812-1126-4ee5-af0f-42f7c9185948)
 
-## Running unit tests
+![Screenshot 2023-11-02 at 16-05-16 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/320d6b33-d2e9-4423-b42d-de689e4dfb51)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Algumas validações foram feitas utilizando o formsModule
 
-## Running end-to-end tests
+![Screenshot 2023-11-02 at 16-13-03 ContactPage](https://github.com/ZanderAlec/angular-projects/assets/72523734/af39f342-3019-44bf-a5e0-4382453d75d4)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
