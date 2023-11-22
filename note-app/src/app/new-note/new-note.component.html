@@ -1,7 +1,7 @@
 <div class="fosco-bkg">
     <div class="form-container">
-        <button>x</button>
-        <form class="form" #f = 'ngForm' (submit) = "onSubmit(f)">
+        <button (click) = "exit()">x</button>
+        <form class="form" #f = "ngForm" (submit) = "onSubmit(f)">
             <div>
                 <label for="">Title</label>
                 <input type="text" name="title" ngModel >

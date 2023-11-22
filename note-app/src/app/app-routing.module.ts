@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { NewNoteComponent } from './new-note/new-note.component';
 import { NoteComponent } from './note/note.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: HomeComponent},
   {path: 'form', component: NewNoteComponent},
-  {path: 'notePage/:title/:description', component: NoteComponent}
+  {path: 'notePage/:note', component: NoteComponent}
 
 ];
 

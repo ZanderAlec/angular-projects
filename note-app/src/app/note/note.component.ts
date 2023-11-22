@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../services/notes.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Note } from '../models/note';
+import { GeralService } from '../services/geral.service';
 
 @Component({
   selector: 'app-note',
@@ -10,25 +11,24 @@ import { Note } from '../models/note';
 })
 export class NoteComponent implements OnInit{
 
-  title: string | null;
-  description: string | null;
+  note: Note;
 
 
-  constructor(private route: ActivatedRoute){
-    this.title = "";
-    this.description = "";
+  constructor(private route: ActivatedRoute, private noteService: NotesService, private geral: GeralService){
+    this.note = {title: " ", description: " ", date : new Date(0)}
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(value => {
-      const t = value.get('title');
-      const d = value.get('description');
-
-    this.title = t;
-    this.description = d;
-        
+    this.route.paramMap.subscribe(value => {      
+      this.note = this.noteService.getNoteById(0);
     });
   }
+
+  return(){
+    this.geral.goToHome();
+  }
+
+
 
 
 

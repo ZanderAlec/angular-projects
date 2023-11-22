@@ -1,10 +1,10 @@
 <div class="container">
-    <button>return</button>
+    <button (click) = "return()">return</button>
     <button>Edit</button>
     <button>delete</button>
     <div class="note-container">
-        <h2 class="note-title">{{ title }}</h2>
-
-        <p class="note-description">{{ description }}</p>
+        <h2 class="note-title">{{ note.title }}</h2>
+        <h3 class="note-date"> {{ note.date | date: 'short' }}</h3>
+        <p class="note-description">{{ note.description}} </p>
     </div>
 </div>
