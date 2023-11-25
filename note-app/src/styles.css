@@ -6,10 +6,10 @@
 
 
 .container{
-    /* outline: 1px solid red;  */
     width: 80%;
     margin: auto;
     padding-top: 2rem;
+    position: relative;
 }
 
 .title-big{
@@ -33,9 +33,15 @@
     background-color: white;
 }
 
+.bttm--round{
+    border-radius: 20px;
+}
+
 .dark-hover:hover{
     cursor: pointer;
     background-color: black;
     color: white;
     justify-content: center;
 }
+
+

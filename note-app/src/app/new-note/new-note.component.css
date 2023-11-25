@@ -1,0 +1,42 @@
+
+.bttm--exit{
+    float: right;
+    border-radius: 20px;
+}
+
+.form{
+    clear: both;
+    padding-top: 2rem;
+}
+
+.textarea{
+    resize: none;
+}
+
+.form-input{
+    width: 100%;
+    border: none;
+}
+
+.form-input:focus{
+    outline: none;
+}
+
+.input-container{
+    margin-bottom: 1.5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input-container:hover{
+    cursor: text;
+}
+
+.bttm--form{
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+
+

@@ -1,18 +1,32 @@
 <div class="fosco-bkg">
     <div class="container">
-        <button (click) = "exit()">x</button>
+        <button class="bttm dark-hover bttm--exit bttm--round" (click) = "exit()">x</button>
         <form class="form" #f = "ngForm" (submit) = "onSubmit(f)">
-            <div>
-                <label for="">Title</label>
+            <!-- <div class="input-container">
+                <label class="form-label" for="">Title</label>
                 <input type="text" name="title" ngModel >
             </div>
            
-            <div>
-                <label for="">Description</label>
+            <div class="input-container">
+                <label class="form-label" for="">Description</label>
                 <textarea name="" id="" cols="30" rows="10" name="description" ngModel></textarea>
-            </div>
+            </div> -->
+
+            <label for="title">
+                <fieldset class="input-container">
+                    <legend>Title</legend>
+                    <input id = "title" class="form-input" type="text" name="title" ngModel >
+                </fieldset>
+            </label>
+
+            <label id="textarea">
+                <fieldset class="input-container">
+                    <legend>Description</legend>
+                    <textarea id="textarea" class=" textarea form-input " name="" id="" cols="30" rows="10"  name="description" ngModel></textarea>
+                </fieldset>
+            </label>
             
-            <input type="submit" value="Criar">
+            <input class="bttm dark-hover bttm--form" type="submit" value="Criar">
         </form>
     </div>
 </div>
