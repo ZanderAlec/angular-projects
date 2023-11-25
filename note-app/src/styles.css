@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .container{
     width: 80%;
     margin: auto;
@@ -24,6 +23,10 @@
 .note-date{
     margin-top: 1.4rem;
     font-size: 1rem;
+}
+
+.note-description{
+    font-size: 1.2em; /* media = 1.5*/
 }
 
 .bttm{

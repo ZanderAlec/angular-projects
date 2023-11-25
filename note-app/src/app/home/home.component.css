@@ -25,6 +25,15 @@
     display: flex;
 }
 
+
+.note-text{
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 15rem;
+}
+
+
 @media(min-width: 40rem){
 
     .note{

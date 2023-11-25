@@ -7,10 +7,23 @@
   <div class = "notes-container">
     <div class="note dark-hover" *ngFor = "let note of noteList; let i = index">
       <div [routerLink] = "['/notePage', i]">
-        <h2 class="note-title">
+
+        <div *ngIf = "note.title.length > 0; then noteTitle else noteDesc"></div>
+
+        <ng-template #noteTitle class="note-resume">
+          <h2 class=" note-text note-title">
             {{ note.title }}
           </h2>
+        </ng-template>
+
+        <ng-template #noteDesc >
+            <p class=" note-text note-description">
+              {{ note.description }}
+            </p>
+        </ng-template>
+
         <h3 class="note-date"> {{ note.date | date: 'shortDate' }}</h3>  
+
       </div>
     </div>
   </div>

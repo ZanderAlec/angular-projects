@@ -1,16 +1,8 @@
 <div class="fosco-bkg">
     <div class="container">
         <button class="bttm dark-hover bttm--exit bttm--round" (click) = "exit()">x</button>
+        <h2 class="title-big">New Note</h2>
         <form class="form" #f = "ngForm" (submit) = "onSubmit(f)">
-            <!-- <div class="input-container">
-                <label class="form-label" for="">Title</label>
-                <input type="text" name="title" ngModel >
-            </div>
-           
-            <div class="input-container">
-                <label class="form-label" for="">Description</label>
-                <textarea name="" id="" cols="30" rows="10" name="description" ngModel></textarea>
-            </div> -->
 
             <label for="title">
                 <fieldset class="input-container">
@@ -26,7 +18,7 @@
                 </fieldset>
             </label>
             
-            <input class="bttm dark-hover bttm--form" type="submit" value="Criar">
+            <input class="bttm dark-hover bttm--form" type="submit" value="Create">
         </form>
     </div>
 </div>
