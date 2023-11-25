@@ -20,7 +20,8 @@ export class NoteComponent implements OnInit{
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(value => {      
-      this.note = this.noteService.getNoteById(0);
+      let id = parseInt(value.get('id') as string);
+      this.note = this.noteService.getNoteById(id);
     });
   }
 

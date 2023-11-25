@@ -1,10 +1,18 @@
 <div class="container">
-    <button (click) = "return()">return</button>
-    <button>Edit</button>
-    <button>delete</button>
+
+    <div class="icons-container">
+        <button class="bttm bttm-icon dark-hover" (click) = "return()"><img  class="icon--small" src="../../assets/arrow.png " alt=""></button>
+    
+        <div class="note-bttns-container" >
+            <img  class="icon" src="../../assets/edit.png" alt="">
+            <img  class="icon" src="../../assets/garbage.png" alt="">
+        </div>
+    </div>
+   
+
     <div class="note-container">
-        <h2 class="note-title">{{ note.title }}</h2>
         <h3 class="note-date"> {{ note.date | date: 'short' }}</h3>
+        <h2 class="title-big">{{ note.title }}</h2>
         <p class="note-description">{{ note.description}} </p>
     </div>
 </div>

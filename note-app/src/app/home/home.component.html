@@ -1,17 +1,20 @@
 <div class="container">
-    <div class="title-new">
-      <h2>Notes</h2>
-      <button routerLink = "/form">+</button>
+    <div class="main-title">
+      <h2 class="title-big">Notes</h2>
+      <button class="bttm dark-hover new-bttm" routerLink = "/form">+</button>
     </div>
-    
-  <div class="notes-container" *ngFor = "let note of noteList; let i = index">
-      <div class="note" [routerLink] = "['/notePage', i]">
-          <h2 class="note-title">
+  
+  <div class = "notes-container">
+    <div class="note dark-hover" *ngFor = "let note of noteList; let i = index">
+      <div [routerLink] = "['/notePage', i]">
+        <h2 class="note-title">
             {{ note.title }}
           </h2>
-          <h3 class="note-date"> {{ note.date | date: 'shortDate' }}</h3>
+        <h3 class="note-date"> {{ note.date | date: 'shortDate' }}</h3>  
       </div>
     </div>
   </div>
+</div>
+  
   
 <router-outlet></router-outlet>

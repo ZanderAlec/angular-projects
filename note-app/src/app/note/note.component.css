@@ -1,0 +1,26 @@
+.note-description{
+    margin-top: 1.5rem;
+    font-size: 1.2em; /* media = 1.5*/
+    
+}
+
+.icon{
+    width: 2rem;
+}
+
+.icon--small{
+    width: 1.2rem;
+}
+
+.bttm-icon{
+    padding: 0 0.5rem;
+}
+
+.icons-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-bttns-container .icon:first-child{
+    margin-right: 1rem;
+}

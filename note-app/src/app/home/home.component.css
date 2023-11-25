@@ -1,0 +1,41 @@
+.notes-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+
+}
+
+.note{
+    width: 100%;
+    padding: 2rem;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.new-bttm{
+    border-radius: 20px;
+    right: 10vw;
+    top: 7vh;
+    position: fixed;
+
+}
+
+.main-title{
+    display: flex;
+}
+
+@media(min-width: 40rem){
+
+    .note{
+        width: 48%;   
+    }
+
+    .notes-container{
+        margin-top: 2rem;
+        padding: 0 5%;
+    }
+}
+
