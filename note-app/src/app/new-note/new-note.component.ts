@@ -1,7 +1,7 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { Note } from '../models/note';
 import { NotesService } from '../services/notes.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { GeralService } from '../services/geral.service';
 
 @Component({
@@ -9,26 +9,34 @@ import { GeralService } from '../services/geral.service';
   templateUrl: './new-note.component.html',
   styleUrls: ['./new-note.component.css']
 })
-export class NewNoteComponent {
-  constructor(private noteService: NotesService, private router: Router, private geral: GeralService){
+export class NewNoteComponent implements OnInit{
+  id: string | null;
+  newNote: Note;
 
+  constructor(private noteService: NotesService, private geral: GeralService, private route: ActivatedRoute){
+    this.id = null;
+    this.newNote = {title: " ", description: " ", date : new Date(0)};
+  }
+
+  ngOnInit(){
+    this.id = this.route.snapshot.paramMap.get('id');
+
+    if(this.id){
+      this.newNote = this.noteService.getNoteById(parseInt(this.id));
+    }
   }
 
   exit(){
     this.geral.goToHome();
   }
 
-  onSubmit(f: any){
+  onSubmit(){
 
-    let date = new Date();
+    this.newNote.date = new Date();
 
-    let newNote: Note = {
-      title: f.value.title,
-      description: f.value.description,
-      date: date
-    };
-
-    this.noteService.insertNote(newNote);
+    if(!this.id){
+      this.noteService.insertNote(this.newNote);
+    }
 
     this.exit();
   }

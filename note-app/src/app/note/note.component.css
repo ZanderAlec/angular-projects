@@ -1,11 +1,19 @@
 .note-description{
     margin-top: 1.5rem;
-    font-size: 1.2em; /* media = 1.5*/
-    
+}
+
+.note-title{
+    text-wrap: wrap;
+    font-size: 1.4rem;
+    margin-top: 1rem;
 }
 
 .icon{
     width: 2rem;
+}
+
+.icon:hover{
+    cursor: pointer;
 }
 
 .icon--small{

@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'form', component: NewNoteComponent},
+  {path: 'form/:id', component: NewNoteComponent},
   {path: 'notePage/:id', component: NoteComponent}
 
 ];

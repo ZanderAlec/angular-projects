@@ -24,5 +24,9 @@ export class NotesService {
     return this.noteList[id];
   }
 
+  removeNote(id: number){
+    this.noteList.splice(id, 1);
+  }
+
 
 }
